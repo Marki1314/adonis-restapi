@@ -5,8 +5,12 @@ const Model = use('Model')
 
 class Evaluacion extends Model {
     tareas () {
-        return this.hasMany('App/Models/Tarea')
+        return this.belongsTo('App/Models/Tarea')
     }
+
+    /*tareas () {
+        return this.hasMany('App/Models/Tarea')
+    }*/
 }
 
 module.exports = Evaluacion

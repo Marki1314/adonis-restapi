@@ -7,8 +7,8 @@ class Tarea extends Model {
     proyecto () {
         return this.belongsTo('App/Models/Proyecto')
     }
-    tareas () {
-        return this.hasMany('App/Models/Tarea')
+    evaluacions () {
+        return this.hasMany('App/Models/Evaluacion')
     }
 }
 

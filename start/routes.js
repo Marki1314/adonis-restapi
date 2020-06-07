@@ -30,7 +30,11 @@ Route.group(() =>{
   Route.patch('tareas/:id', 'TareaController.update').middleware('auth');
   Route.delete('tareas/:id', 'TareaController.destroy').middleware('auth');
   //Rutas de las evaluaciones
-  Route.get('tareas/:id/evaluacions', 'EvaluacionController.index').middleware('auth');
-  Route.post('tareas/:id/evaluacions', 'EvaluacionController.create').middleware('auth');
+  /*Route.get('tareas/:id/evaluacions', 'EvaluacionController.index').middleware('auth');
+  Route.post('tareas/:id/evaluacions', 'EvaluacionController.create').middleware('auth');*/
+  Route.get('proyectos/:id/tareas/:id/evaluacions', 'EvaluacionController.index').middleware('auth');
+  Route.post('proyectos/:id/tareas/:id/evaluacions', 'EvaluacionController.create').middleware('auth');
+  Route.patch('evaluacions/:id', 'EvaluacionController.update').middleware('auth');
+  Route.delete('evaluacions/:id', 'EvaluacionController.destroy').middleware('auth');
 }).prefix('api/v1/');
 
